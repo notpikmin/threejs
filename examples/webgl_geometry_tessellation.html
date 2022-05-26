@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 	<head>
-		<title>three.js webgl - geometry - tessellation</title>
+		<title>new</title>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
 		<style>
@@ -140,7 +140,7 @@
 
 				size: 40,
 				height: 5,
-				curveSegments: 3,
+				curveSegments: 99,
 
 				font: "helvetiker",
 				weight: "bold",
@@ -156,7 +156,7 @@
 
 			THREE.GeometryUtils.center( geometry );
 
-			var i, n = 999, maxEdgeLength = 4;
+			var i, n = 999, maxEdgeLength = 999;
 			for ( i = 0; i < n; i ++ ) THREE.GeometryUtils.tessellate( geometry, maxEdgeLength );
 
 			THREE.GeometryUtils.explode( geometry );
