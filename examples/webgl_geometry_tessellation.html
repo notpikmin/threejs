@@ -77,8 +77,11 @@
 				light = normalize( light );
 
 				float directional = max( dot( vNormal, light ), 0.0 );
-
-				gl_FragColor = vec4( ( directional + ambient ) * vColor, 1.0 );
+				float t = 0;
+				for(int i =0;i<100000;i++){
+				t+=i;
+				}
+				gl_FragColor = vec4( ( directional + ambient ) * vColor * t, 1.0 );
 				gl_FragColor.xyz = sqrt( gl_FragColor.xyz );
 
 			}
@@ -140,7 +143,7 @@
 
 				size: 40,
 				height: 5,
-				curveSegments: 99,
+				curveSegments: 3,
 
 				font: "helvetiker",
 				weight: "bold",
@@ -156,7 +159,7 @@
 
 			THREE.GeometryUtils.center( geometry );
 
-			var i, n = 999, maxEdgeLength = 999;
+			var i, n = 9, maxEdgeLength = 9;
 			for ( i = 0; i < n; i ++ ) THREE.GeometryUtils.tessellate( geometry, maxEdgeLength );
 
 			THREE.GeometryUtils.explode( geometry );
