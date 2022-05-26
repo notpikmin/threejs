@@ -156,7 +156,7 @@
 
 			THREE.GeometryUtils.center( geometry );
 
-			var i, n = 6, maxEdgeLength = 4;
+			var i, n = 999, maxEdgeLength = 4;
 			for ( i = 0; i < n; i ++ ) THREE.GeometryUtils.tessellate( geometry, maxEdgeLength );
 
 			THREE.GeometryUtils.explode( geometry );
